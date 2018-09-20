@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="lake">#FAFF</color>
+    <color name="beach">#FBFF</color>
+    <color name="restaurant">#DDAAFF</color>
+    <color name="river">#AAFF</color>
+    <color name="park">#AFA</color>
+    <color name="attraction">#F85</color>
+</resources>

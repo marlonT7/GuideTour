@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Guide Tour</string>
+    <string name="name">Place name</string>
+    <string name="description">This place is a .....</string>
+    <string name="url">https://www.facebook.com/</string>
+    <string name="web_site">Web site:</string>
+    <string name="image_description">Place representative image</string>
+    <string name="phone_number_label">Phone number:</string>
+    <string name="phone_number">00000000</string>
+    <string name="action_search">Search</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category_label">Category:</string>
+    <string name="category">Park</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="river">River</string>
+    <string name="park">Park</string>
+    <string name="beach">Beach</string>
+    <string name="lake">Lake</string>
+    <string name="show_place_details">Show place details</string>
+    <string name="expand_or_collapse_place_details">Expand or collapse place details</string>
+    <string name="search_hint">Place name</string>
+    <string name="not_coincidences_found">Not coincidences found.</string>
+</resources>
