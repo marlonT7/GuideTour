@@ -1,14 +1,17 @@
 package com.example.marlon.guidetour
 
+
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
+
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "category"
@@ -42,8 +45,6 @@ class PlacesListFragment : Fragment(), PlacesListAdapter.SelectedPlace {
         intent.data = Uri.parse(webSite)
         startActivity(intent)
     }
-
-
 
 
     private lateinit var viewManager: RecyclerView.LayoutManager
@@ -238,9 +239,9 @@ class PlacesListFragment : Fragment(), PlacesListAdapter.SelectedPlace {
     )
     // Places registered list in the app by category
     private var places: ArrayList<Place> = arrayListOf()
-    private lateinit var viewAdapter:PlacesListAdapter
+    private lateinit var viewAdapter: PlacesListAdapter
 
-    private lateinit var recyclerView:RecyclerView
+    private lateinit var recyclerView: RecyclerView
 
     private var listener: OnFragmentInteractionListener? = null
 
@@ -296,6 +297,25 @@ class PlacesListFragment : Fragment(), PlacesListAdapter.SelectedPlace {
      * for more information.
      */
     interface OnFragmentInteractionListener
+
+
+    // Filters by the search param
+    fun filterWord(query: String) {
+        places = if (query == "") {
+            allPlaces.filter { place: Place ->
+                place.category == categories[category]
+            } as ArrayList<Place>
+        } else {
+            places.filter { place: Place ->
+                place.category.toLowerCase().contains(query.toLowerCase())
+            } as ArrayList<Place>
+        }
+
+        viewAdapter=PlacesListAdapter(places, this)
+
+        viewAdapter.notifyDataSetChanged()
+    }
+
 
     companion object {
         /**

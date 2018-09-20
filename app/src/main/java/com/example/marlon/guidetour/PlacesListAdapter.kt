@@ -19,7 +19,6 @@ class PlacesListAdapter(private var places: ArrayList<Place>, private val select
         fun dialNumber(phone: String)
         fun expand(position: Int)
     }
-//    var allPlaces = places
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder.
@@ -100,16 +99,6 @@ class PlacesListAdapter(private var places: ArrayList<Place>, private val select
         }
         return holder
     }
-
-    // Filters by the search param
-//    fun filterWord(query: String) {
-//        if (query == "") {
-//            places = allPlaces
-//        } else {
-//            places.filter { place: Place ->
-//                place.category.contains(query)
-//            } as ArrayList<Place>
-//        }}
 
         // Return the size of your dataSet (invoked by the layout manager)
         override fun getItemCount() = places.size
